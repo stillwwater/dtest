@@ -3,7 +3,7 @@ dtest
 
 /dəˈtest/
 
-A tiny C++ test framework.
+A tiny C/C++ test and benchmark framework.
 
 ~~~ cpp
 // math_test.cpp
@@ -118,7 +118,7 @@ cl -DTEST foo.cpp bar.cpp test_unity.cpp
 
 ## Compiler support
 
-Any C++ 17 compiler that defines `__COUNTER__` will work (msvc, clang, gcc,
+Any C99 or C++ 17 compiler that defines `__COUNTER__` will work (msvc, clang, gcc,
 icc). dtest makes use of `[[maybe_unused]]` which requires C++17. However,
 both clang and gcc are happy to compile this using C++11 (msvc is not). If you
 remove `[[maybe_unused]]` dtest will also compile with C++98, but you will get
